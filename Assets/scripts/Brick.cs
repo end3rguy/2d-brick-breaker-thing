@@ -5,6 +5,8 @@ using UnityEngine;
 public class Brick : MonoBehaviour
 {
     Level level;
+    [SerializeField] AudioClip chompSFX;
+    [Range(0f,1f)][SerializeField] float sfxVOLUME;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class Brick : MonoBehaviour
     {
         Debug.Log(collision);
         level.Removebrix();
+        AudioSource.PlayClipAtPoint(chompSFX, Camera.main.transform.position, sfxVOLUME);
         Destroy(gameObject);
     }
 }
