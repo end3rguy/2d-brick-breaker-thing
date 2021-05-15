@@ -5,6 +5,9 @@ using UnityEngine;
 public class Brick : MonoBehaviour
 {
     Level level;
+    [SerializeField]int colorIndex = 0;
+    [SerializeField] Color[] colors;
+    [SerializeField] int brickHealth; 
     [SerializeField] AudioClip chompSFX;
     [Range(0f,1f)][SerializeField] float sfxVOLUME;
     // Start is called before the first frame update
@@ -23,9 +26,20 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        brickHealth = (brickHealth - 1);
+        
         Debug.Log(collision);
-        level.Removebrix();
+        
         AudioSource.PlayClipAtPoint(chompSFX, Camera.main.transform.position, sfxVOLUME);
-        Destroy(gameObject);
+        if (brickHealth == 0)
+        {
+            level.Removebrix();
+            Destroy(gameObject);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = colors[colorIndex];
+            colorIndex = colorIndex + 1;
+        }
     }
 }

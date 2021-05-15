@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819919842cd40413b994f93ab9f96ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickHealth: 1
   chompSFX: {fileID: 8300000, guid: 2446d5e1b00d6439189b4b0270b52050, type: 3}
   sfxVOLUME: 0.1
 --- !u!82 &-1976555904583718083
