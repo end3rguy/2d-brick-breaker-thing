@@ -6,7 +6,8 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] Paddle paddle;
     Vector2 paddleballoffdset;
-    [SerializeField] Vector2 launchvelocity;
+    [SerializeField] Vector2 autoplaylaunchvelocity;
+    [SerializeField] Vector2 playerlaunchvelocity;
     bool launched = false; 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,14 @@ public class Ball : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody2D>().velocity=launchvelocity;
+            if (FindObjectOfType<GameStatus>().IsAutoPlay())
+            {
+                GetComponent<Rigidbody2D>().velocity = autoplaylaunchvelocity;
+            }else
+            {
+                GetComponent<Rigidbody2D>().velocity = playerlaunchvelocity;
+            }
+            
             launched = true;
         }
     }

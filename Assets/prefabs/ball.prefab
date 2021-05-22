@@ -134,4 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  launchvelocity: {x: 2, y: 15}
+  autoplaylaunchvelocity: {x: 2, y: 15}
+  playerlaunchvelocity: {x: 0, y: 15}

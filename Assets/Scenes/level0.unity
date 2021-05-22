@@ -471,6 +471,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStatus
       objectReference: {fileID: 0}
+    - target: {fileID: 64825688820900959, guid: 8a4eee293f24349488a7ec8e6daa9162,
+        type: 3}
+      propertyPath: autoplay
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4eee293f24349488a7ec8e6daa9162, type: 3}
 --- !u!1001 &1004430089

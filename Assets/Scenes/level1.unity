@@ -620,6 +620,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStatus
       objectReference: {fileID: 0}
+    - target: {fileID: 64825688820900959, guid: 8a4eee293f24349488a7ec8e6daa9162,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64825688820900959, guid: 8a4eee293f24349488a7ec8e6daa9162,
+        type: 3}
+      propertyPath: autoplay
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4eee293f24349488a7ec8e6daa9162, type: 3}
 --- !u!1001 &516647359
@@ -1058,6 +1068,11 @@ PrefabInstance:
     - target: {fileID: 9179257127682038437, guid: d286a27c0d3274c3fa89ce8af7790f90,
         type: 3}
       propertyPath: launchvelocity.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179257127682038437, guid: d286a27c0d3274c3fa89ce8af7790f90,
+        type: 3}
+      propertyPath: autoplaylaunchvelocity.x
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 9179257127682038439, guid: d286a27c0d3274c3fa89ce8af7790f90,
